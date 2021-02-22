@@ -1,0 +1,56 @@
+<html>
+	<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Registro</title>
+        <link rel="stylesheet" href="registro.css">
+        <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+
+        <script type = "text/javascript">  
+            var url=  '/gestionUsuarios.js';
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.src = url;
+            head.appendChild(script);
+            console.log("añadiendo gestionUsuarios");
+        </script>  
+	</head>
+
+    <h1 id="titulo">
+        <center>
+        <p>Registrate!</p>
+        </center>
+    </h1>
+
+    <body>
+        <form action="javascript:void(0);" method="POST" class="form" enctype="multipart/form-data" onsubmit="javascript:obtenerDatosRegistro();">
+            <div class="container">
+                <br><br><br><br>
+                Nombre de usuario:
+                &nbsp&nbsp
+                <input id="nick" type="text" name="nick"><br><br><br>
+                Contraseña:
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                <input id="pass" type="password" name="pass">
+                &nbsp&nbsp
+                <input type="checkbox" onclick="mostrarContraseña()">Mostrar contraseña<br><br><br>
+                Nombre y Apellido:
+                &nbsp&nbsp
+                <input id="apellido" type="text" name="apellido"><br><br><br>
+                Email:
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                <input id="email" type="text" name="email"><br><br><br>    
+                <br><br>    
+                
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                <input type="submit" value = "Registrarse">
+                <input type="button" value = "Iniciar Sesión" onclick="paginaIniciarSesion();">
+
+            </div>
+    
+        </form>
+
+    </body>
+
+</html>

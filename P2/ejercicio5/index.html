@@ -1,0 +1,75 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Registro</title>
+        <link rel="stylesheet" href="registro.css">
+        <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+
+        <script type = "text/javascript">  
+            var url=  '/gestionUsuarios.js';
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.src = url;
+            head.appendChild(script);
+            console.log("añadiendo gestionUsuarios");
+        </script>  
+
+	</head>
+
+    <h1 id="titulo">
+        <center>
+        <p>Página HOME</p>
+        </center>
+    </h1>
+
+    <body>
+        <h2 id="titulo">
+            <center>
+            <p>Crear Proyecto</p>
+            </center>
+        </h2>
+        <form action="javascript:void(0);" onsubmit="javascript:crearProyecto();">
+
+            <div class="container">
+                <br><br><br><br>
+                Nombre del proyecto:
+                &nbsp&nbsp
+                <input id="nombre" type="text" name="nombre"><br><br><br>
+
+                Descripcion:
+                &nbsp&nbsp
+                <input id="descripcion" type="text" name="descripcion"><br><br><br>
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    
+                <br><br>    
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                <input type="submit" value = "Crear">
+            </div>
+    
+        </form>
+
+        <h2 id="titulo">
+            <center>
+            <p>Listado proyectos</p>
+            </center>
+        </h2>
+
+        <div id="informacion">
+            <ul id="list">
+                <p>Proyectos actuales </p>
+            </ul>
+        </div>
+
+
+        <h2 id="titulo">
+            <center>
+            <p>Cambiar de modo</p>
+            </center>
+        </h2>
+
+        <input type="button" value = "Cambiar a modo de proyecto" onclick="cambiarModoProyecto();">
+    </body>
+</html>

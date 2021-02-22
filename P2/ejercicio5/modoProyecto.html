@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Inicio de Sesion</title>
+        <link rel="stylesheet" href="registro.css">
+        <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+
+        <script type = "text/javascript">  
+            var url=  '/gestionUsuarios.js';
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.src = url;
+            head.appendChild(script);
+            console.log("añadiendo socket.io-client");
+        </script>  
+
+	</head>
+
+    <h1 id="titulo">
+        <center>
+        <p>Modo Proyecto!</p>
+        </center>
+    </h1>
+
+    <body>
+        <p> Aqui el usuario podría hacer su gestión de proyecto al estar en el estado proyecto</p>
+    </body>
+</html>
